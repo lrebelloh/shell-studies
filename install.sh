@@ -12,7 +12,7 @@ title() {
 # ------------------------------------------------------------------------------
 title "Creating backup & creating symlinks to new shell scripts"
 
-cd ~/shell-studies/files
+cd ~/.shell-studies/files
 for file in *; do
   echo -ne "$file ${GRAY}"
   if [ ! -d ~/.shell_scripts ]; then

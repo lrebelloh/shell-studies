@@ -22,15 +22,15 @@ for file in *; do
     echo "Done!" 
   fi
   if [ -s ~/.shell_scripts/$file ]; then
-    if ! diff -q ~/.shell_scripts/$file ~/shell-studies/files/$file &> /dev/null; then
+    if ! diff -q ~/.shell_scripts/$file ~/.shell-studies/files/$file &> /dev/null; then
       mv ~/.shell_scripts/$file ~/.shell_scripts/$file.bkp
-      ln -s ~/shell-studies/files/$file ~/.shell_scripts/$file
+      ln -s ~/.shell-studies/files/$file ~/.shell_scripts/$file
       echo -ne "Has been moved to ~/.shell_scripts/$file.bkp and a new symlink has been created ${GREEN}✓${ORIGINAL_COLOR}\n"
     else
       echo -ne "Is identical ${RED}✕${ORIGINAL_COLOR}" 
     fi
   else
-    ln -s ~/shell-studies/files/$file ~/.shell_scripts/$file
+    ln -s ~/.shell-studies/files/$file ~/.shell_scripts/$file
     echo -ne "symlink has been created ${GREEN}✓${ORIGINAL_COLOR}"
   fi
   echo -e "${ORIGINAL_COLOR}"

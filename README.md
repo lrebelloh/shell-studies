@@ -4,8 +4,6 @@ Repository with all my shell scripts.
 
 # Install
 
-```
-
 Clone this repo:
 
 ```
